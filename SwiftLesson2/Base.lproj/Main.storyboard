@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,25 +34,40 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqJ-Rz-GNn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-Bz-wHw">
-                                <rect key="frame" x="163" y="171" width="48" height="30"/>
-                                <state key="normal" title="tap me"/>
-                                <connections>
-                                    <action selector="buttonTapped2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMo-aD-7nx"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-SJ-3Qd">
+                                <rect key="frame" x="137.5" y="161" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Wlh-Y2-1mJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Chy-eh-kk0">
+                                <rect key="frame" x="137.5" y="211" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2Il-iy-6Uc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pgb-Bz-wHw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6P-da-8l6"/>
+                            <constraint firstItem="6hg-SJ-3Qd" firstAttribute="top" secondItem="4UF-lv-Huv" secondAttribute="bottom" constant="20" id="EyN-pF-ts1"/>
                             <constraint firstItem="MKt-v0-Nvp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ppq-Yf-pNa"/>
                             <constraint firstItem="4UF-lv-Huv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RtW-ii-Nwi"/>
                             <constraint firstItem="MKt-v0-Nvp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WLk-fS-1tB"/>
-                            <constraint firstItem="pgb-Bz-wHw" firstAttribute="top" secondItem="4UF-lv-Huv" secondAttribute="bottom" constant="30" id="bYE-V3-GYr"/>
+                            <constraint firstItem="Chy-eh-kk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yao-yt-aPQ"/>
+                            <constraint firstItem="6hg-SJ-3Qd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="adC-Pd-dQk"/>
+                            <constraint firstItem="Chy-eh-kk0" firstAttribute="top" secondItem="6hg-SJ-3Qd" secondAttribute="bottom" constant="20" id="eVO-M7-z6y"/>
                             <constraint firstItem="4UF-lv-Huv" firstAttribute="top" secondItem="MKt-v0-Nvp" secondAttribute="bottom" constant="50" id="qWX-B3-wpq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="6hg-SJ-3Qd" id="SEO-Ol-02m"/>
+                        <outlet property="text2" destination="Chy-eh-kk0" id="hp1-Nh-yyT"/>
                         <outlet property="theLabel" destination="MKt-v0-Nvp" id="YGt-wB-vhg"/>
                     </connections>
                 </viewController>
